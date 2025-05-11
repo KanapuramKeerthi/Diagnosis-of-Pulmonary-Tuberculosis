@@ -1,65 +1,71 @@
-# 🩺 TB Detection Using CNN
+# 🫁 Pulmonary Tuberculosis Detection from Chest X-Rays
 
-A Deep Learning-based system for detecting **Pulmonary Tuberculosis** from chest X-ray images using Convolutional Neural Networks (CNN). This project aims to assist medical professionals by automating the classification of X-ray images as **Normal** or **Tuberculosis-infected**, contributing to early diagnosis and treatment planning.
-
----
-
-## 📂 Dataset
-
-- **Name:** TB_Chest_Radiography_Database  
-- **Source:** [Kaggle](https://www.kaggle.com/datasets)  
-- **Classes:** `Normal` and `Tuberculosis`  
-- **Format:** Grayscale chest X-ray images  
-- **Image Size:** Resized to `128x128` pixels for model compatibility  
+A Deep Learning-based system for classifying chest X-ray images as **Normal** or **Tuberculosis-infected** using Convolutional Neural Networks (CNNs).
 
 ---
 
-## 🛠️ Technologies Used
+## 📦 Dataset
 
-- 🐍 Python (Google Colab)
-- 🧠 TensorFlow / Keras
-- 🖼️ OpenCV (image processing)
-- 📊 Matplotlib (visualizations)
-- 🔢 NumPy (numerical operations)
-- 📈 Scikit-learn (metrics & evaluation)
+- **TB_Chest_Radiography_Database**  
+  Source: [Kaggle Dataset](https://www.kaggle.com/datasets/tawsifurrahman/tuberculosis-tb-chest-xray-dataset)
 
 ---
 
-## 🧱 Model Architecture
+## 🚀 Getting Started
 
-- `Conv2D` → `ReLU` → `MaxPooling`
-- 3 convolutional blocks with increasing filters
-- `Flatten` → `Dense` → `Dropout`
-- Final `Dense` layer with `Sigmoid` activation for binary classification
+### ✅ Step-by-step Execution:
 
-> Optimized using **Adam** optimizer and **Binary Crossentropy** loss.
+1. **Upload Dataset**
+   - Upload the full dataset to your **Google Drive** for Colab access.
 
----
+2. **Open the Notebook**
+   - Launch the Jupyter notebook via **Google Colab**.
 
-## ⚙️ Training Configuration
+3. **Update Paths**
+   - Modify the dataset file paths as per your Google Drive directory structure.
 
-- **Epochs:** 10  
-- **Learning Rate:** 0.0001  
-- **Optimizer:** Adam  
-- **Loss Function:** Binary Crossentropy  
-- **Data Augmentation:**  
-  - Rotation  
-  - Zoom  
-  - Horizontal Flip  
-  - Width & Height Shift  
+4. **Run the Notebook**
+   - Execute the notebook **cell-by-cell** to:
+     - Preprocess data
+     - Build and train the CNN model
+     - Evaluate the results
 
----
+5. **Predict from Images**
+   - Use either a **random image** from the dataset or upload your **custom image** for prediction.
 
-## 📈 Model Performance
-
-- ✅ **Accuracy:** ~94.05% on test data
-- 🩻 Demonstrated ability to generalize features from TB and normal X-rays
-- 📊 Visualization of training/validation metrics provided in the notebook
+> 🎯 **Tip:** You can adjust the prediction **threshold value** in the final sigmoid layer to fine-tune sensitivity or specificity.
 
 ---
 
-## 🚀 Usage
+## 🧠 Model Output
 
-1. Clone this repository  
-   ```bash
-   git clone https://github.com/yourusername/tb-detection-cnn.git
+- ✅ Trained CNN model saved as:  
+  `tb_detection_model128.h5`
+
+- 📌 Prediction Output:
+  - Classifies input image as **Normal** or **Tuberculosis**
+  - Displays:
+    - 🖼️ Input X-ray image
+    - 📊 Predicted class label
+    - 📈 Confidence score (probability)
+
+---
+
+## 🧪 Functional Testing
+
+- 🧪 Random test images were selected to validate model performance.
+- 🔄 Ensured end-to-end pipeline:
+  - Data Loading → Preprocessing → Prediction → Output
+- 🔐 Verified:
+  - No I/O failures
+  - No logic errors
+  - Model integration stability
+
+---
+
+## 🧑‍💻 Contributor
+
+### 👩‍💻 K Keerthi  
+Final Year B.Tech – Computer Science and Engineering (AI & ML)  
+Vel Tech University, Chennai  
+🔍 Passionate about applying Deep Learning for medical diagnostics
