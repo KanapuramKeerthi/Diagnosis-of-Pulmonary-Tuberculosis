@@ -1,39 +1,65 @@
-**Diagnosis of Pulmonary Tuberculosis using Deep Learning**
-This project focuses on the automated detection of Pulmonary Tuberculosis (TB) using a Convolutional Neural Network (CNN) model trained on chest X-ray images. The goal is to assist healthcare professionals in early and accurate diagnosis, improving patient outcomes and reducing manual screening time.
+# 🩺 TB Detection Using CNN
 
-**Project Overview**
-Tuberculosis is a potentially serious infectious disease that primarily affects the lungs. Traditional diagnosis through chest X-rays requires expert radiologists and can be subjective. This project leverages deep learning techniques to build a CNN model that classifies X-ray images into TB-positive or TB-negative categories.
+A Deep Learning-based system for detecting **Pulmonary Tuberculosis** from chest X-ray images using Convolutional Neural Networks (CNN). This project aims to assist medical professionals by automating the classification of X-ray images as **Normal** or **Tuberculosis-infected**, contributing to early diagnosis and treatment planning.
 
-**Dataset**
-**Source:** Publicly available datasets containing labeled chest X-ray images.
+---
 
-**Classes:**
+## 📂 Dataset
 
-TB Positive
+- **Name:** TB_Chest_Radiography_Database  
+- **Source:** [Kaggle](https://www.kaggle.com/datasets)  
+- **Classes:** `Normal` and `Tuberculosis`  
+- **Format:** Grayscale chest X-ray images  
+- **Image Size:** Resized to `128x128` pixels for model compatibility  
 
-Normal (TB Negative)
+---
 
-**Model Architecture**
-Model: Custom-built Convolutional Neural Network (CNN)
+## 🛠️ Technologies Used
 
-**Layers Used:**
+- 🐍 Python (Google Colab)
+- 🧠 TensorFlow / Keras
+- 🖼️ OpenCV (image processing)
+- 📊 Matplotlib (visualizations)
+- 🔢 NumPy (numerical operations)
+- 📈 Scikit-learn (metrics & evaluation)
 
-Convolutional Layers
-Max Pooling
-Dropout for regularization
-Fully Connected Dense Layers
-Softmax / Sigmoid activation for final classification
-Loss Function: Binary Crossentropy
-Optimizer: Adam
-Metrics: Accuracy, Precision, Recall
+---
 
-**Technologies Used**
-Python
-TensorFlow / Keras
-NumPy, Matplotlib, Pandas (for data handling and visualization)
- Google Colab
+## 🧱 Model Architecture
 
- **Results**
-Achieved high accuracy on validation data
-Model was able to generalize well on unseen chest X-ray images
-Visualization tools like confusion matrix and ROC curves were used to evaluate performance
+- `Conv2D` → `ReLU` → `MaxPooling`
+- 3 convolutional blocks with increasing filters
+- `Flatten` → `Dense` → `Dropout`
+- Final `Dense` layer with `Sigmoid` activation for binary classification
+
+> Optimized using **Adam** optimizer and **Binary Crossentropy** loss.
+
+---
+
+## ⚙️ Training Configuration
+
+- **Epochs:** 10  
+- **Learning Rate:** 0.0001  
+- **Optimizer:** Adam  
+- **Loss Function:** Binary Crossentropy  
+- **Data Augmentation:**  
+  - Rotation  
+  - Zoom  
+  - Horizontal Flip  
+  - Width & Height Shift  
+
+---
+
+## 📈 Model Performance
+
+- ✅ **Accuracy:** ~94.05% on test data
+- 🩻 Demonstrated ability to generalize features from TB and normal X-rays
+- 📊 Visualization of training/validation metrics provided in the notebook
+
+---
+
+## 🚀 Usage
+
+1. Clone this repository  
+   ```bash
+   git clone https://github.com/yourusername/tb-detection-cnn.git
