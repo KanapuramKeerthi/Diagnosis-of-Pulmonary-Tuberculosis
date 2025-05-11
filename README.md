@@ -5,7 +5,7 @@ This project focuses on the automated detection of Pulmonary Tuberculosis (TB) u
 Tuberculosis is a potentially serious infectious disease that primarily affects the lungs. Traditional diagnosis through chest X-rays requires expert radiologists and can be subjective. This project leverages deep learning techniques to build a CNN model that classifies X-ray images into TB-positive or TB-negative categories.
 
 **Dataset**
-Source: Publicly available datasets containing labeled chest X-ray images.
+**Source:** Publicly available datasets containing labeled chest X-ray images.
 
 **Classes:**
 
